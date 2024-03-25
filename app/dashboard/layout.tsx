@@ -6,10 +6,12 @@ import React from "react";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen min-w-full bg-background max-h-screen">
-      <nav className="flex justify-between border-b border-border h-[60px] px-4 py-[2px]">
+      <nav className="flex items-center justify-between border-b border-border h-[60px] px-4 py-[2px]">
         <Logo />
-        <ThemeSwitcher />
-        <UserButton afterSignOutUrl="/signin" />
+        <div className="flex gap-4 items-center">
+          <ThemeSwitcher />
+          <UserButton afterSignOutUrl="/signin" />
+        </div>
       </nav>
       <main className="flex w-full flex-grow">{children}</main>
     </div>
