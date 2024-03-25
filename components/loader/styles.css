@@ -1,0 +1,17 @@
+.custom-loader {
+  box-sizing: border-box;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--primary) 95%, #0000) 50% 1px/6px
+      6px no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - 7px), var(--secondary) 0);
+  animation: s9 var(--speed) infinite linear;
+}
+
+@keyframes s9 {
+  to {
+    transform: rotate(1turn);
+  }
+}
